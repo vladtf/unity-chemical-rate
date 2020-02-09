@@ -11,7 +11,6 @@ public class CubeMover : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>();
-        rend.material.color = Color.red;
     }
     [SerializeField]
     private float speed = 2;
