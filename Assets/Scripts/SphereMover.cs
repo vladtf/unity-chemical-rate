@@ -11,9 +11,15 @@ public class SphereMover : MonoBehaviour
         //gameObject.GetComponent<Renderer>().material.color = color;
         
         _rb = GetComponent<Rigidbody>();
-        //_rb.velocity = new Vector3(0, 40);
-        _rb.maxAngularVelocity = maxAngularVelocity;
-        StartCoroutine(ChangeRotation());
+
+        int x = Random.Range(-30, 30);
+        int y = Random.Range(-30, 30);
+        int z = Random.Range(-30, 30);
+        _rb.velocity = new Vector3(x, y, z);
+
+        //_rb.maxAngularVelocity = maxAngularVelocity;
+
+        //StartCoroutine(ChangeRotation());
     }
 
     [SerializeField]
@@ -23,6 +29,10 @@ public class SphereMover : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
     }
     private IEnumerator ChangeRotation()
     {

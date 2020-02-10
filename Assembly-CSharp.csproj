@@ -63,7 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CubeMover.cs" />
+    <Compile Include="Assets\Scripts\FlyCamer.cs" />
     <Compile Include="Assets\Scripts\SphereMover.cs" />
     <Compile Include="Assets\Scripts\TerrainMover.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
