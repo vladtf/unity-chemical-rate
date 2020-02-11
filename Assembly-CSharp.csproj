@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\FlyCamer.cs" />
     <Compile Include="Assets\Scripts\SphereMover.cs" />
     <Compile Include="Assets\Scripts\TerrainMover.cs" />
+    <Compile Include="Assets\SlowMoEffect.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/vladu/source/repos/ChemicalReactionsVisualizations/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

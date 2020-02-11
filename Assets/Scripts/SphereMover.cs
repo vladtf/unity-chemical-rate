@@ -8,38 +8,29 @@ public class SphereMover : MonoBehaviour
     public Rigidbody _rb;
     void Start()
     {
-        //gameObject.GetComponent<Renderer>().material.color = color;
-        
         _rb = GetComponent<Rigidbody>();
 
-        int x = Random.Range(-30, 30);
-        int y = Random.Range(-30, 30);
-        int z = Random.Range(-30, 30);
-        _rb.velocity = new Vector3(x, y, z);
-
-        //_rb.maxAngularVelocity = maxAngularVelocity;
-
-        //StartCoroutine(ChangeRotation());
+        RandomMove();
     }
 
     [SerializeField]
-    private Color color = Color.green;
-    public int maxAngularVelocity = 1000;
+    private int Max_Speed = 30;
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-    }
-    private IEnumerator ChangeRotation()
-    {
-        while (true)
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            _rb.AddTorque(new Vector3(10 * UnityEngine.Random.Range(0, 1f), UnityEngine.Random.Range(0, 1f), UnityEngine.Random.Range(0, 1f)), ForceMode.Impulse);
-            yield return new WaitForSeconds(1);
+            RandomMove();
         }
     }
+
+    private void RandomMove()
+    {
+        int x = Random.Range(-Max_Speed, Max_Speed);
+        int y = Random.Range(-Max_Speed, Max_Speed);
+        int z = Random.Range(-Max_Speed, Max_Speed);
+
+        _rb.velocity = new Vector3(x, y, z);
+    }
+    
 }
