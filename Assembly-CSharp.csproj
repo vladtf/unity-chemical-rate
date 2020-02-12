@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ButtonClick.cs" />
     <Compile Include="Assets\Scripts\FlyCamer.cs" />
     <Compile Include="Assets\Scripts\SphereMover.cs" />
     <Compile Include="Assets\Scripts\TerrainMover.cs" />

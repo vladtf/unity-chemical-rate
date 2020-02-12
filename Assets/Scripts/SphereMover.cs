@@ -18,9 +18,14 @@ public class SphereMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+
+        if (Input.GetKey(KeyCode.E))
         {
-            RandomMove();
+            Slower();
+        }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            Faster();
         }
     }
 
@@ -31,6 +36,15 @@ public class SphereMover : MonoBehaviour
         int z = Random.Range(-Max_Speed, Max_Speed);
 
         _rb.velocity = new Vector3(x, y, z);
+    }
+
+    public void Slower()
+    {
+        _rb.velocity = _rb.velocity - _rb.velocity / 5;
+    }
+    public void Faster()
+    {
+        _rb.velocity = _rb.velocity + _rb.velocity / 5;
     }
     
 }

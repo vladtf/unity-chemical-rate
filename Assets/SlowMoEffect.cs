@@ -5,25 +5,17 @@ using UnityEngine.UI;
 
 public class SlowMoEffect : MonoBehaviour
 {
-    public Button myButton;
-    // Start is called before the first frame update
-    void Start()
-    {
-        Button btn = gameObject.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
-    }
+	public Button yourButton;
 
-    void TaskOnClick()
-    {
-        if (Time.timeScale != 0.3f)
-        {
-            Time.timeScale = 0.3f;
-        }
-        else
-        {
-            Time.timeScale = 1.0f;
-        }
+	void Start()
+	{
+		Button btn = yourButton.GetComponent<Button>();
+		btn.onClick.AddListener(TaskOnClick);
+	}
 
-    }
-
+	void TaskOnClick()
+	{
+		SphereMover sm = gameObject.GetComponent<SphereMover>();
+		sm.Slower();
+	}
 }
