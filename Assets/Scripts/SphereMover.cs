@@ -5,7 +5,8 @@ using UnityEngine;
 public class SphereMover : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Rigidbody _rb;
+    public Rigidbody _rb; 
+    public GameObject explosionPrefab;
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -35,6 +36,12 @@ public class SphereMover : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
+
+        // other code which destroys the player
+    }
     private void RandomMove()
     {
         int x = Random.Range(-Max_Speed, Max_Speed);
