@@ -10,6 +10,12 @@ public class SphereMover : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
 
+        //for (int i = 0; i < 4; i++)
+        //{
+        //    Instantiate(gameObject);
+        //}
+
+
         RandomMove();
     }
 
@@ -46,5 +52,15 @@ public class SphereMover : MonoBehaviour
     {
         _rb.velocity = _rb.velocity + _rb.velocity / 5;
     }
-    
+
+    public void SpawnNew()
+    {
+        Instantiate(gameObject);
+    }
+
+    public void Remove()
+    {
+        Destroy(gameObject);
+    }
+
 }
