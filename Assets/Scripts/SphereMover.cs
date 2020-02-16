@@ -16,7 +16,6 @@ public class SphereMover : MonoBehaviour
         //    Instantiate(gameObject);
         //}
 
-
         RandomMove();
     }
 
@@ -34,6 +33,8 @@ public class SphereMover : MonoBehaviour
         {
             Faster();
         }
+
+        _rb.velocity = Max_Speed * (_rb.velocity.normalized);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -53,11 +54,21 @@ public class SphereMover : MonoBehaviour
 
     public void Slower()
     {
-        _rb.velocity = _rb.velocity - _rb.velocity / 5;
+        if (Max_Speed - 5 > 0)
+        {
+            Max_Speed -= 5;
+        }
+        else
+        {
+            Max_Speed = 0;
+        }
     }
     public void Faster()
     {
-        _rb.velocity = _rb.velocity + _rb.velocity / 5;
+        Max_Speed += 5;
+
+        if (_rb.velocity.normalized == _rb.velocity.normalized*0)
+            RandomMove();
     }
 
     public void SpawnNew()
