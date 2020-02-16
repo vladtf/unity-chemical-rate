@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ButtonClick.cs" />
+    <Compile Include="Assets\FullyInvisible.cs" />
     <Compile Include="Assets\QuantityScript.cs" />
     <Compile Include="Assets\Scripts\FlyCamer.cs" />
     <Compile Include="Assets\Scripts\SphereMover.cs" />

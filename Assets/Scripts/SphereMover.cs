@@ -38,7 +38,7 @@ public class SphereMover : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
+        //Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
 
         // other code which destroys the player
     }
