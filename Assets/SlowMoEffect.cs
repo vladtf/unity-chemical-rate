@@ -15,7 +15,7 @@ public class SlowMoEffect : MonoBehaviour
 
 	void TaskOnClick()
 	{
-		SphereMover sm = gameObject.GetComponent<SphereMover>();
+		SphereMoveScript sm = gameObject.GetComponent<SphereMoveScript>();
 		sm.Slower();
 	}
 }

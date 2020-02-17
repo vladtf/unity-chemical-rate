@@ -17,21 +17,24 @@ public class QuantityScript : MonoBehaviour
 	[System.Obsolete]
 	public void TaskOnClick()
 	{
-		var foundObj = FindObjectsOfTypeAll(typeof(SphereMover));
+		var foundObj = FindObjectsOfTypeAll(typeof(SphereMoveScript));
 
 		Text text = transform.Find("Text").GetComponent<Text>();
 		string str = text.text;
 
 		if (str == "-")
 		{
-			for (int i = 0; i < foundObj.Length/2; i++)
+			if (foundObj.Length > 2)
 			{
-				(foundObj[i] as SphereMover).Remove();
+				for (int i = 0; i < foundObj.Length / 2; i++)
+				{
+					(foundObj[i] as SphereMoveScript).Remove();
+				}
 			}
 		}
 		else
 		{
-			foreach (SphereMover item in foundObj)
+			foreach (SphereMoveScript item in foundObj)
 			{
 				item.SpawnNew();
 			}
