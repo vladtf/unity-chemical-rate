@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 
 public class SphereMover : MonoBehaviour
 {
     // Start is called before the first frame update
     public Rigidbody _rb; 
     public GameObject explosionPrefab;
+    public Slider sliderInstance;
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -16,23 +18,16 @@ public class SphereMover : MonoBehaviour
         //    Instantiate(gameObject);
         //}
 
+
         RandomMove();
     }
 
     [SerializeField]
-    private int Max_Speed = 30;
+    private static int Max_Speed = 30;
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKey(KeyCode.E))
-        {
-            Slower();
-        }
-        if (Input.GetKey(KeyCode.Q))
-        {
-            Faster();
-        }
+        //Max_Speed = (int)slider.value;
 
         _rb.velocity = Max_Speed * (_rb.velocity.normalized);
     }
@@ -50,6 +45,19 @@ public class SphereMover : MonoBehaviour
         int z = Random.Range(-Max_Speed, Max_Speed);
 
         _rb.velocity = new Vector3(x, y, z);
+    }
+
+    public void CurrentSpeed(float value)
+    {
+        if (Max_Speed == 0)
+        {
+            var foundObj = FindObjectsOfTypeAll(typeof(SphereMover));
+            foreach (SphereMover item in foundObj)
+            {
+                item.Faster();
+            }
+        }
+        Max_Speed = (int)value;
     }
 
     public void Slower()

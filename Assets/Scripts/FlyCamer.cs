@@ -36,9 +36,10 @@ public class FlyCamer : MonoBehaviour
 		//Screen.lockCursor = true;
 	}
 
+	[System.Obsolete]
 	void Update()
 	{
-		if (Input.GetKey(KeyCode.LeftControl))
+		if (Input.GetKey(KeyCode.Space))
 		{
 			rotationX += Input.GetAxis("Mouse X") * cameraSensitivity * Time.deltaTime;
 			rotationY += Input.GetAxis("Mouse Y") * cameraSensitivity * Time.deltaTime;
