@@ -1,16 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 
 public class SphereMoveScript : MonoBehaviour
 {
     // Start is called before the first frame update
     public Rigidbody _rb;
+
     public GameObject explosionPrefab;
     public Slider sliderInstance;
     private Vector3 initialiPosition;
-    void Start()
+
+    private void Start()
     {
         _rb = GetComponent<Rigidbody>();
 
@@ -26,8 +26,9 @@ public class SphereMoveScript : MonoBehaviour
 
     [SerializeField]
     private static int Max_Speed = 30;
+
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         //Max_Speed = (int)slider.value;
 
@@ -36,11 +37,12 @@ public class SphereMoveScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name.Contains("Sphere"))
+        if (collision.gameObject.name.Contains("Sphere"))
         {
             Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
         }
     }
+
     private void RandomMove()
     {
         int x = Random.Range(-Max_Speed, Max_Speed);
@@ -75,6 +77,7 @@ public class SphereMoveScript : MonoBehaviour
             Max_Speed = 0;
         }
     }
+
     public void Faster()
     {
         Max_Speed += 5;
@@ -87,12 +90,23 @@ public class SphereMoveScript : MonoBehaviour
     {
         Instantiate(gameObject);
     }
+
     public void Remove()
     {
         Destroy(gameObject);
     }
+
     public void RestartBalls()
     {
         transform.position = initialiPosition;
+    }
+
+    public void RemoveAllBalls()
+    {
+        var foundObj = FindObjectsOfTypeAll(typeof(SphereMoveScript));
+        for (int i = 0; i < foundObj.Length - 2; i++)
+        {
+            (foundObj[i] as SphereMoveScript).Remove();
+        }
     }
 }
