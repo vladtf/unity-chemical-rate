@@ -1,21 +1,54 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 
 public class ScaleScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //Vector3 minScale;
+    //public Vector3 maxScale;
+    public float speed = 2f;
+    public float duration = 10f;
+    public Button buttonBigger;
+    public Button buttonSmaller;
     void Start()
     {
-        
+        //while (true)
+        //{
+        //    yield return ScaleTo(transform.localScale, transform.localScale += transform.localScale / 5, duration);
+        //    yield return ScaleTo(transform.localScale, transform.localScale -= transform.localScale / 5, duration);
+        //}
+
+
     }
 
-    public void ScaleBigger()
+    public void Bigger()
     {
-        transform.localScale += transform.localScale / 5;
+        StartCoroutine(ScaleBigger());
     }
-    public void ScaleSmaller()
+    public void Smaller()
     {
-        transform.localScale -= transform.localScale / 5;
+        StartCoroutine(ScaleSmaller());
+    }
+
+    public IEnumerator ScaleBigger()
+    {
+        yield return ScaleTo(transform.localScale, transform.localScale += transform.localScale / 5, duration);
+    }
+    public IEnumerator ScaleSmaller()
+    {
+        yield return ScaleTo(transform.localScale, transform.localScale -= transform.localScale / 5, duration);
+    }
+
+    public IEnumerator ScaleTo(Vector3 a, Vector3 b, float time)
+    {
+        float i = 0.0f;
+        float rate = (1.0f / time) * speed;
+        while (i < 1.0f)
+        {
+            i += Time.deltaTime * rate;
+            transform.localScale = Vector3.Lerp(a, b, i);
+            yield return null;
+        }
     }
 }

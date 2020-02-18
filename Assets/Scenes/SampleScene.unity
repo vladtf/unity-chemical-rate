@@ -1240,7 +1240,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1632522832}
-        m_MethodName: ScaleSmaller
+        m_MethodName: Smaller
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2552,7 +2552,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1632522832}
-        m_MethodName: ScaleBigger
+        m_MethodName: Bigger
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2694,6 +2694,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2849bdc3c89d5ed43b6ae0c57c0bab80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
+  duration: 5
 --- !u!64 &1632522835
 MeshCollider:
   m_ObjectHideFlags: 0
