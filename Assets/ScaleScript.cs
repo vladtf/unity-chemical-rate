@@ -11,6 +11,7 @@ public class ScaleScript : MonoBehaviour
     public float duration = 10f;
     public Button buttonBigger;
     public Button buttonSmaller;
+    public Transform cover;
     void Start()
     {
         //while (true)
@@ -25,10 +26,16 @@ public class ScaleScript : MonoBehaviour
     public void Bigger()
     {
         StartCoroutine(ScaleBigger());
+
+        //Vector3 temp = new Vector3(0, 5f, 0);
+        //cover.transform.position += temp;
     }
     public void Smaller()
     {
         StartCoroutine(ScaleSmaller());
+
+        //Vector3 temp = new Vector3(0, 5f, 0);
+        //cover.transform.position -= temp;
     }
 
     public IEnumerator ScaleBigger()
@@ -48,7 +55,11 @@ public class ScaleScript : MonoBehaviour
         {
             i += Time.deltaTime * rate;
             transform.localScale = Vector3.Lerp(a, b, i);
+
+            cover.transform.position = new Vector3(cover.transform.position.x, gameObject.GetComponent<Collider>().bounds.max.y, cover.transform.position.z);
+
             yield return null;
         }
     }
+
 }
