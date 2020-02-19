@@ -25,7 +25,7 @@ public class SphereMoveScript : MonoBehaviour
     }
 
     [SerializeField]
-    private static int Max_Speed = 30;
+    public static int Max_Speed = 5;
 
     // Update is called once per frame
     private void Update()
@@ -33,6 +33,7 @@ public class SphereMoveScript : MonoBehaviour
         //Max_Speed = (int)slider.value;
 
         _rb.velocity = Max_Speed * (_rb.velocity.normalized);
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -40,16 +41,45 @@ public class SphereMoveScript : MonoBehaviour
         if (collision.gameObject.name.Contains("Sphere"))
         {
             Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
+
+        }
+        else
+        {
+            Debug.Log("Wall");
+
+            Vector3 velocity = _rb.velocity;
+            _rb.velocity = new Vector3(-velocity.x, Random.Range(-1,1), -velocity.z);
+
+            //_rb.AddForce(new Vector3(0, 0, 0));
+            //gameObject.transform.Translate(AddNoiseOnAngle(5, 5));
         }
     }
-
+    private Vector3 RandomVector(float min, float max)
+    {
+        var x = Random.Range(min, max);
+        var y = Random.Range(min, max);
+        var z = Random.Range(min, max);
+        return new Vector3(x, y, z);
+    }
     private void RandomMove()
     {
-        int x = Random.Range(-Max_Speed, Max_Speed);
-        int y = Random.Range(-Max_Speed, Max_Speed);
-        int z = Random.Range(-Max_Speed, Max_Speed);
+        _rb.velocity = RandomVector(0f, 5f);
+    }
 
-        _rb.velocity = new Vector3(x, y, z);
+    Vector3 AddNoiseOnAngle(float min, float max)
+    {
+        float xNoise = Random.Range(min, max);
+        float yNoise = Random.Range(min, max);
+        float zNoise = 0;
+
+        // Now get the angle between w.r.t. a vector 3 direction
+        Vector3 noise = new Vector3(
+            Mathf.Sin(2f * 3.1415926f * xNoise / 360),
+            Mathf.Sin(2f * 3.1415926f * yNoise / 360),
+                            0
+                        );
+        return noise;
+
     }
 
     [System.Obsolete]
