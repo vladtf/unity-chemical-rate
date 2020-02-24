@@ -6,7 +6,6 @@ public class ButtonClick : MonoBehaviour
 {
 	public Button yourButton;
 
-	[System.Obsolete]
 	void Start()
 	{
 		Button btn = yourButton.GetComponent<Button>();

@@ -45,10 +45,10 @@ public class SphereMoveScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("Wall");
+            //Debug.Log("Wall");
 
             Vector3 velocity = _rb.velocity;
-            _rb.velocity = new Vector3(-velocity.x, Random.Range(-1,1), -velocity.z);
+            _rb.velocity = new Vector3(-velocity.x, Random.Range(-1, 1), -velocity.z);
 
             //_rb.AddForce(new Vector3(0, 0, 0));
             //gameObject.transform.Translate(AddNoiseOnAngle(5, 5));
@@ -131,6 +131,7 @@ public class SphereMoveScript : MonoBehaviour
         transform.position = initialiPosition;
     }
 
+    [System.Obsolete]
     public void RemoveAllBalls()
     {
         var foundObj = FindObjectsOfTypeAll(typeof(SphereMoveScript));

@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class CloseApp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     public void CloseApplication()
     {
         Application.Quit();
