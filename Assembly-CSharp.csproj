@@ -68,6 +68,7 @@
     <Compile Include="Assets\FlyCamer.cs" />
     <Compile Include="Assets\FullyInvisible.cs" />
     <Compile Include="Assets\GoToGithub.cs" />
+    <Compile Include="Assets\PresentationScript.cs" />
     <Compile Include="Assets\QuantityScript.cs" />
     <Compile Include="Assets\ScaleScript.cs" />
     <Compile Include="Assets\SlowMoEffect.cs" />
