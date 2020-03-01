@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CanvasScript : MonoBehaviour
 {
@@ -8,6 +6,7 @@ public class CanvasScript : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
     public void Show()
     {
         gameObject.SetActive(true);

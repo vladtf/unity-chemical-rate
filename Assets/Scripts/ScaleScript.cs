@@ -1,26 +1,22 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.UIElements;
 
 public class ScaleScript : MonoBehaviour
 {
     //Vector3 minScale;
     //public Vector3 maxScale;
-    public float speed = 2f;
-    public float duration = 10f;
-    public Button buttonBigger;
-    public Button buttonSmaller;
-    public Transform cover;
-    void Start()
+    [SerializeField] private float speed = 2f;
+
+    [SerializeField] private float duration = 10f;
+    [SerializeField] private Transform cover;
+
+    private void Start()
     {
         //while (true)
         //{
         //    yield return ScaleTo(transform.localScale, transform.localScale += transform.localScale / 5, duration);
         //    yield return ScaleTo(transform.localScale, transform.localScale -= transform.localScale / 5, duration);
         //}
-
-
     }
 
     public void Bigger()
@@ -30,6 +26,7 @@ public class ScaleScript : MonoBehaviour
         //Vector3 temp = new Vector3(0, 5f, 0);
         //cover.transform.position += temp;
     }
+
     public void Smaller()
     {
         StartCoroutine(ScaleSmaller());
@@ -42,6 +39,7 @@ public class ScaleScript : MonoBehaviour
     {
         yield return ScaleTo(transform.localScale, transform.localScale += transform.localScale / 5, duration);
     }
+
     public IEnumerator ScaleSmaller()
     {
         yield return ScaleTo(transform.localScale, transform.localScale -= transform.localScale / 5, duration);
@@ -61,5 +59,4 @@ public class ScaleScript : MonoBehaviour
             yield return null;
         }
     }
-
 }

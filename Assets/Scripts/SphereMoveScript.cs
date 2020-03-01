@@ -3,11 +3,11 @@ using UnityEngine.Experimental.UIElements;
 
 public class SphereMoveScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public Rigidbody _rb;
+    [SerializeField] private Rigidbody _rb;
+    [SerializeField] private GameObject explosionPrefab;
+    [SerializeField] private Slider sliderInstance;
+    [SerializeField] private static int Max_Speed = 5;
 
-    public GameObject explosionPrefab;
-    public Slider sliderInstance;
     private Vector3 initialiPosition;
 
     private void Start()
@@ -24,16 +24,12 @@ public class SphereMoveScript : MonoBehaviour
         RandomMove();
     }
 
-    [SerializeField]
-    public static int Max_Speed = 5;
-
     // Update is called once per frame
     private void Update()
     {
         //Max_Speed = (int)slider.value;
 
         _rb.velocity = Max_Speed * (_rb.velocity.normalized);
-
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -41,7 +37,6 @@ public class SphereMoveScript : MonoBehaviour
         if (collision.gameObject.name.Contains("Sphere"))
         {
             Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
-
         }
         else
         {
@@ -54,6 +49,7 @@ public class SphereMoveScript : MonoBehaviour
             //gameObject.transform.Translate(AddNoiseOnAngle(5, 5));
         }
     }
+
     private Vector3 RandomVector(float min, float max)
     {
         var x = Random.Range(min, max);
@@ -61,12 +57,13 @@ public class SphereMoveScript : MonoBehaviour
         var z = Random.Range(min, max);
         return new Vector3(x, y, z);
     }
+
     private void RandomMove()
     {
         _rb.velocity = RandomVector(0f, 5f);
     }
 
-    Vector3 AddNoiseOnAngle(float min, float max)
+    private Vector3 AddNoiseOnAngle(float min, float max)
     {
         float xNoise = Random.Range(min, max);
         float yNoise = Random.Range(min, max);
@@ -79,7 +76,6 @@ public class SphereMoveScript : MonoBehaviour
                             0
                         );
         return noise;
-
     }
 
     [System.Obsolete]

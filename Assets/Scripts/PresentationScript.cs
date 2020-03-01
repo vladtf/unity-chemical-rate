@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +10,7 @@ public class PresentationScript : MonoBehaviour
 
     private int imageIndex;
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -28,11 +27,10 @@ public class PresentationScript : MonoBehaviour
             slide.GetComponent<RawImage>().texture = pictures[imageIndex];
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow) && imageIndex < pictures.Count-2)
+        if (Input.GetKeyDown(KeyCode.RightArrow) && imageIndex < pictures.Count - 1)
         {
             imageIndex++;
             slide.GetComponent<RawImage>().texture = pictures[imageIndex];
         }
-
     }
 }
