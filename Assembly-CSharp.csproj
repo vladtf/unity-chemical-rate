@@ -63,18 +63,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CanvasScript.cs" />
-    <Compile Include="Assets\CloseApp.cs" />
-    <Compile Include="Assets\FlyCamer.cs" />
-    <Compile Include="Assets\FullyInvisible.cs" />
-    <Compile Include="Assets\GoToGithub.cs" />
-    <Compile Include="Assets\PresentationScript.cs" />
-    <Compile Include="Assets\QuantityScript.cs" />
-    <Compile Include="Assets\ScaleScript.cs" />
-    <Compile Include="Assets\SlowMoEffect.cs" />
-    <Compile Include="Assets\SpeedButtonsClick.cs" />
-    <Compile Include="Assets\SphereMoveScript.cs" />
-    <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
+    <Compile Include="Assets\Scripts\CanvasScript.cs" />
+    <Compile Include="Assets\Scripts\CloseApp.cs" />
+    <Compile Include="Assets\Scripts\FlyCamer.cs" />
+    <Compile Include="Assets\Scripts\FullyInvisible.cs" />
+    <Compile Include="Assets\Scripts\GoToGithub.cs" />
+    <Compile Include="Assets\Scripts\PresentationScript.cs" />
+    <Compile Include="Assets\Scripts\QuantityScript.cs" />
+    <Compile Include="Assets\Scripts\ScaleScript.cs" />
+    <Compile Include="Assets\Scripts\SlowMoEffect.cs" />
+    <Compile Include="Assets\Scripts\SpeedButtonsClick.cs" />
+    <Compile Include="Assets\Scripts\SphereMoveScript.cs" />
     <Reference Include="Unity.ProGrids">
       <HintPath>C:/Users/vladu/source/repos/ChemicalReactionsVisualizations/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
     </Reference>
