@@ -63,6 +63,67 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Awesome Charts\Core\Examples\BarChart 1\BarChartController1.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Examples\BarChart 2\BarChartController2.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Examples\LineChart 1\LineChartController1.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Examples\LineChart 2\LineChartController2.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Examples\PieChart 2\PieChartController.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Axis\AxisBase.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Axis\AxisBounds.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Axis\AxisRendererBase.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Axis\XAxis.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Axis\XAxisBarChartRenderer.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Axis\XAxisRenderer.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Axis\YAxis.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Axis\YAxisRenderer.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Base\ACMonoBehaviour.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\AxisBaseChart.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\BarChart\Bar.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\BarChart\BarCharPositioner.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\BarChart\BarChart.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\BarChart\BarChartConfig.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\BarChart\BarSizingMethod.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\BaseChart.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\ChartValuePopup.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\LineChart\LineChart.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\LineChart\LineChartBackground.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\LineChart\LineChartConfig.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\LineChart\LineEntryIndicator.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\PieChart\PieChart.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\PieChart\PieChartClickSelectionBehaviour.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\PieChart\PieChartConfig.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\PieChart\PieChartEntryView.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Chart\PieChart\PieChartValueIndicator.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Data\AxisChartData.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Data\BarData.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Data\BarDataSet.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Data\BarEntry.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Data\ChartData.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Data\DataSet.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Data\Entry.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Data\LineData.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Data\LineDataSet.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Data\LineEntry.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Data\PieData.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Data\PieDataSet.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Data\PieEntry.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Legend\LegendEntry.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Legend\LegendEntryView.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Legend\LegendView.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\UI\IValueFormatter.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\UI\PivotValue.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\UI\SimpleValueFormatter.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\UI\ViewCreator.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\UI\XAxisBarChartValueFormatter.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Utils\BezierUtils.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Utils\Defaults.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Utils\MathUtils.cs" />
+    <Compile Include="Assets\Awesome Charts\Dependencies\unity-ui-extensions\Scripts\Primitives\UILineRenderer.cs" />
+    <Compile Include="Assets\Awesome Charts\Dependencies\unity-ui-extensions\Scripts\Primitives\UIPrimitiveBase.cs" />
+    <Compile Include="Assets\Awesome Charts\Dependencies\unity-ui-extensions\Scripts\Utilities\BezierPath.cs" />
+    <Compile Include="Assets\Awesome Charts\Dependencies\unity-ui-extensions\Scripts\Utilities\CableCurve.cs" />
+    <Compile Include="Assets\Awesome Charts\Dependencies\unity-ui-extensions\Scripts\Utilities\SetPropertyUtility.cs" />
+    <Compile Include="Assets\Counter.cs" />
     <Compile Include="Assets\Scripts\CanvasScript.cs" />
     <Compile Include="Assets\Scripts\CloseApp.cs" />
     <Compile Include="Assets\Scripts\FlyCamer.cs" />
@@ -74,7 +135,6 @@
     <Compile Include="Assets\Scripts\SlowMoEffect.cs" />
     <Compile Include="Assets\Scripts\SpeedButtonsClick.cs" />
     <Compile Include="Assets\Scripts\SphereMoveScript.cs" />
-    <Compile Include="Assets\StaticsCount.cs" />
     <Reference Include="Unity.ProGrids">
       <HintPath>C:/Users/vladu/source/repos/ChemicalReactionsVisualizations/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
     </Reference>

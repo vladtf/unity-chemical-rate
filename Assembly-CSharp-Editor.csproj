@@ -63,7 +63,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Editor\AxisBaseEditor.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Editor\BarChartConfigEditor.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Editor\BarEntryDrawer.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Editor\ChartMenuItems.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Editor\LineEntryDrawer.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Editor\XAxisEditor.cs" />
+    <Compile Include="Assets\Awesome Charts\Core\Scripts\Editor\YAxisEditor.cs" />
     <Reference Include="Unity.ProGrids">
       <HintPath>C:/Users/vladu/source/repos/ChemicalReactionsVisualizations/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
     </Reference>

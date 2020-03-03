@@ -472,6 +472,7 @@ RectTransform:
   - {fileID: 1299451409}
   - {fileID: 698227143}
   - {fileID: 1502174960}
+  - {fileID: 713673512}
   m_Father: {fileID: 1383756275}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1629,6 +1630,111 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &713673511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 713673512}
+  - component: {fileID: 713673514}
+  - component: {fileID: 713673513}
+  m_Layer: 0
+  m_Name: LineChart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &713673512
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713673511}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 242470408}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 287, y: -18.5}
+  m_SizeDelta: {x: 213.7, y: 258.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &713673513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713673511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b5b656e7af34ff68b4b8528ae8ce88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  legendView: {fileID: 0}
+  xAxis:
+    lineThickness: 2
+    lineColor: {r: 1, g: 1, b: 1, a: 0.3019608}
+    minAxisValue: 0
+    maxAxisValue: 10
+    autoAxisMinValue: 1
+    autoAxisMaxValue: 1
+    linesCount: 5
+    labelSize: 10
+    labelColor: {r: 1, g: 1, b: 1, a: 1}
+    labelMargin: 5
+    labelFont: {fileID: 0}
+    labelFontStyle: 0
+    dashedLine: 1
+    shouldDrawLabels: 1
+    shouldDrawLines: 1
+    lineStep: 0
+  yAxis:
+    lineThickness: 2
+    lineColor: {r: 1, g: 1, b: 1, a: 0.5647059}
+    minAxisValue: 0
+    maxAxisValue: 100
+    autoAxisMinValue: 1
+    autoAxisMaxValue: 1
+    linesCount: 5
+    labelSize: 10
+    labelColor: {r: 1, g: 1, b: 1, a: 1}
+    labelMargin: 5
+    labelFont: {fileID: 0}
+    labelFontStyle: 0
+    dashedLine: 1
+    shouldDrawLabels: 1
+    shouldDrawLines: 1
+  data:
+    customLabels: []
+    dataSets:
+    - title: Collisions / second
+      entries: []
+      lineThickness: 3
+      lineColor: {r: 1, g: 1, b: 1, a: 1}
+      fillColor: {r: 0, g: 0, b: 0, a: 0}
+      fillTexture: {fileID: 0}
+      useBezier: 1
+  config:
+    valueIndicatorSize: 4
+    showValueIndicators: 1
+    popupPrefab: {fileID: 0}
+--- !u!222 &713673514
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713673511}
+  m_CullTransparentMesh: 0
 --- !u!1 &727129252
 GameObject:
   m_ObjectHideFlags: 0
@@ -4629,6 +4735,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionCounter: {fileID: 1502174961}
   waitTime: 1
+  chart: {fileID: 713673513}
+  MaxPointsOnChart: 20
 --- !u!1 &1519095154
 GameObject:
   m_ObjectHideFlags: 0
