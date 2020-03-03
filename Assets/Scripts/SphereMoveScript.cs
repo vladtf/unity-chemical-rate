@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-using UnityEngine.Experimental.UIElements;
+﻿using System;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class SphereMoveScript : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class SphereMoveScript : MonoBehaviour
     [SerializeField] private GameObject explosionPrefab;
     [SerializeField] private Slider sliderInstance;
     [SerializeField] private static int Max_Speed = 5;
+    [SerializeField] private Text collisionCounter;
 
     private Vector3 initialiPosition;
 
@@ -37,24 +39,32 @@ public class SphereMoveScript : MonoBehaviour
         if (collision.gameObject.name.Contains("Sphere"))
         {
             Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
+
+            IncrementCollision();
         }
         else
         {
             //Debug.Log("Wall");
 
             Vector3 velocity = _rb.velocity;
-            _rb.velocity = new Vector3(-velocity.x, Random.Range(-1, 1), -velocity.z);
+            _rb.velocity = new Vector3(-velocity.x, UnityEngine.Random.Range(-1, 1), -velocity.z);
 
             //_rb.AddForce(new Vector3(0, 0, 0));
             //gameObject.transform.Translate(AddNoiseOnAngle(5, 5));
         }
     }
 
+    private void IncrementCollision()
+    {
+        float current = Int32.Parse(collisionCounter.text) + 1;
+        collisionCounter.text = current.ToString();
+    }
+
     private Vector3 RandomVector(float min, float max)
     {
-        var x = Random.Range(min, max);
-        var y = Random.Range(min, max);
-        var z = Random.Range(min, max);
+        var x = UnityEngine.Random.Range(min, max);
+        var y = UnityEngine.Random.Range(min, max);
+        var z = UnityEngine.Random.Range(min, max);
         return new Vector3(x, y, z);
     }
 
@@ -65,16 +75,15 @@ public class SphereMoveScript : MonoBehaviour
 
     private Vector3 AddNoiseOnAngle(float min, float max)
     {
-        float xNoise = Random.Range(min, max);
-        float yNoise = Random.Range(min, max);
+        float xNoise = UnityEngine.Random.Range(min, max);
+        float yNoise = UnityEngine.Random.Range(min, max);
         float zNoise = 0;
 
         // Now get the angle between w.r.t. a vector 3 direction
         Vector3 noise = new Vector3(
             Mathf.Sin(2f * 3.1415926f * xNoise / 360),
             Mathf.Sin(2f * 3.1415926f * yNoise / 360),
-                            0
-                        );
+            0);
         return noise;
     }
 

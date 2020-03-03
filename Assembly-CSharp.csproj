@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\SlowMoEffect.cs" />
     <Compile Include="Assets\Scripts\SpeedButtonsClick.cs" />
     <Compile Include="Assets\Scripts\SphereMoveScript.cs" />
+    <Compile Include="Assets\StaticsCount.cs" />
     <Reference Include="Unity.ProGrids">
       <HintPath>C:/Users/vladu/source/repos/ChemicalReactionsVisualizations/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
     </Reference>
