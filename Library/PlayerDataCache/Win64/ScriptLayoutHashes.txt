@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/vladu/Desktop/Test/MyFirstGame/ChemicalReactionsVisualizations.exe
+C:/Users/vladu/Desktop/Proiect chimie/ChemicalRateVisualizer/ChemicalReactionsVisualizations.exe
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
 SceneListEnd?
@@ -182,7 +182,7 @@ f4fe2bd3bb1c24087cb9337c105f28d3 Assembly-CSharp.dll:AwesomeCharts.BarChartContr
 fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
-b03b4c6b696f7d1bfa44636b51a6faef Assembly-CSharp.dll:.Counter
+9e8333c49505246c1acdd0bb5e91160b Assembly-CSharp.dll:.Counter
 931f489e44eadf809e9310429c99dde5 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension

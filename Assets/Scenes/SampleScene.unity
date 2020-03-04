@@ -1695,7 +1695,7 @@ MonoBehaviour:
     labelFont: {fileID: 0}
     labelFontStyle: 0
     dashedLine: 1
-    shouldDrawLabels: 1
+    shouldDrawLabels: 0
     shouldDrawLines: 1
     lineStep: 0
   yAxis:
@@ -1703,7 +1703,7 @@ MonoBehaviour:
     lineColor: {r: 1, g: 1, b: 1, a: 0.5647059}
     minAxisValue: 0
     maxAxisValue: 100
-    autoAxisMinValue: 1
+    autoAxisMinValue: 0
     autoAxisMaxValue: 1
     linesCount: 5
     labelSize: 10
@@ -2695,7 +2695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.6000061, y: -0.07006836}
+  m_AnchoredPosition: {x: -0.5999756, y: -0.07006836}
   m_SizeDelta: {x: 36.23999, y: 31.619995}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &923900466
@@ -4443,7 +4443,7 @@ GameObject:
   - component: {fileID: 1425282616}
   - component: {fileID: 1425282615}
   m_Layer: 0
-  m_Name: RawImage
+  m_Name: Slide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4812,9 +4812,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionCounter: {fileID: 1502174961}
-  waitTime: 1
+  waitTime: 0.5
   chart: {fileID: 713673513}
   MaxPointsOnChart: 20
+  scaleX: 1
 --- !u!1 &1519095154
 GameObject:
   m_ObjectHideFlags: 0

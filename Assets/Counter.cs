@@ -11,9 +11,10 @@ public class Counter : MonoBehaviour
     [SerializeField] private float waitTime = 0.1f;
     [SerializeField] private LineChart chart;
     [SerializeField] private int MaxPointsOnChart = 20;
+    [SerializeField] private float scaleX = 1;
 
     private float timer = 0.0f;
-    private int currentPoint = 0;
+    private float currentPoint = 0;
 
     private int collisions;
 
@@ -29,7 +30,7 @@ public class Counter : MonoBehaviour
         if (timer > waitTime)
         {
             collisions = Int32.Parse(collisionCounter.text);
-            currentPoint++;
+            currentPoint += scaleX;
 
             chart.GetChartData().DataSets[0].AddEntry(new LineEntry(currentPoint, collisions));
 
