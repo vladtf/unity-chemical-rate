@@ -7,8 +7,9 @@ public class SphereMoveScript : MonoBehaviour
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private GameObject explosionPrefab;
     [SerializeField] private Slider sliderInstance;
-    [SerializeField] private static int Max_Speed = 5;
     [SerializeField] private Text collisionCounter;
+    [SerializeField] private static int Max_Speed = 5;
+    [SerializeField] private static bool isParticle = true;
 
     private Vector3 initialiPosition;
 
@@ -38,7 +39,10 @@ public class SphereMoveScript : MonoBehaviour
     {
         if (collision.gameObject.name.Contains("Sphere"))
         {
-            Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
+            if (isParticle)
+            {
+                Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
+            }
 
             IncrementCollision();
         }
@@ -144,5 +148,10 @@ public class SphereMoveScript : MonoBehaviour
         {
             (foundObj[i] as SphereMoveScript).Remove();
         }
+    }
+
+    public void SetSpawnable()
+    {
+        isParticle = !isParticle;
     }
 }
